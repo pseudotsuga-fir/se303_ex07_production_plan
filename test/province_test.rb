@@ -44,4 +44,10 @@ class ProvinceTest < Minitest::Test
       @asia.profit
     end
   end
+
+  def test_string_producers
+    assert_raises NoMethodError do
+      prov = new Province(string_province_data)
+    end
+  end
 end
